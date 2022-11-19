@@ -11,6 +11,7 @@
     "retry_join": ["consul-server2"],
     "connect": {
       "enabled": true
-    }
+    },
+    "encrypt": "vCLl4r0p1k2BQolW97WdOXo6OjdaBcsiYGKGZarH8aA="
   }
   
