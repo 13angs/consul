@@ -1,5 +1,5 @@
 {
-  "node_name": "consul-server2",
+  "node_name": "consul-server3",
   "server": true,
   "ui_config": {
     "enabled": true
@@ -9,7 +9,7 @@
     "http": "0.0.0.0"
   },
   "retry_join": [
-    "consul-server1",
+    "consul-server2",
     "consul-server3"
   ],
   "connect": {

@@ -1,7 +1,6 @@
 FROM consul:latest
 
-COPY ./config/*.json /consul/config/
+COPY ./config/* /consul/config/
 
-RUN mkdir /consul_policies
-
-COPY ./policies/*.hcl /consul_policies/
+COPY ./policies /etc/conf.d/policies
+COPY ./certs /etc/conf.d/certs
