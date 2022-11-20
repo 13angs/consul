@@ -13,7 +13,7 @@ services:
       - "8500:8500"
     
     # /consul/config/server1.json exist in the container
-    command: "agent -bootstrap-expect=2 -config-file /consul/config/server1.json"
+    command: "agent -bootstrap-expect=3 -config-file /consul/config/server1.json"
 
     networks:
       - consul-network
@@ -24,7 +24,18 @@ services:
     restart: always
     
     # /consul/config/server2.json exist in the container
-    command: "agent -bootstrap-expect=2 -config-file /consul/config/server2.json"
+    command: "agent -bootstrap-expect=3 -config-file /consul/config/server2.json"
+
+    networks:
+      - consul-network
+
+  consul-server3:
+    image: 13angs/consul:latest
+    container_name: consul-server3
+    restart: always
+    
+    # /consul/config/server3.json exist in the container
+    command: "agent -bootstrap-expect=3 -config-file /consul/config/server3.json"
 
     networks:
       - consul-network
