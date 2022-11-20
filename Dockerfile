@@ -1,4 +1,7 @@
 FROM consul:latest
 
-COPY ./server1.json /consul/config/server1.json
-COPY ./server2.json /consul/config/server2.json
+COPY ./config/*.json /consul/config/
+
+RUN mkdir /consul_policies
+
+COPY ./policies/*.hcl /consul_policies/
